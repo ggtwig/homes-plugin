@@ -1,0 +1,9 @@
+name: Homes
+version: '${project.version}'
+main: com.jack.homes.Main
+api-version: 1.16
+authors: [ Jack ]
+description: Simple homes plugin
+commands:
+  sethome:
+  home:
