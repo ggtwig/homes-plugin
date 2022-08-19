@@ -15,7 +15,7 @@ public class HomeFiles {
     }
 
     public void initialise() {
-        File homeFile = new File(plugin.getDataFolder(), "homes.yml");
+        File homeFile = new File("homes.yml");
         if (homeFile.exists()) {
             YamlConfiguration homeConfig = YamlConfiguration.loadConfiguration(homeFile);
             for (String s : homeConfig.getKeys(false)) {
@@ -27,7 +27,7 @@ public class HomeFiles {
     }
 
     public void terminate() {
-        File homeFile = new File(plugin.getDataFolder(), "homes.yml");
+        File homeFile = new File("homes.yml");
 
         if (!homeFile.exists()) {
             try {
@@ -49,7 +49,7 @@ public class HomeFiles {
     }
 
     public void addHome(UUID id, Location location) {
-        File homeFile = new File(plugin.getDataFolder(), "homes.yml");
+        File homeFile = new File("homes.yml");
         if (!homeFile.exists()) {
             try {
                 homeFile.createNewFile();
