@@ -24,12 +24,12 @@ public class SetHomeCommand implements CommandExecutor {
             Location location = player.getLocation();
 
             plugin.addHome(id, location);
-            player.sendMessage(ChatColor.GREEN + "Home has been set!");
+            player.sendMessage("§aHome has been set!");
 
             plugin.getFiles().addHome(id, location);
 
             if (plugin.hasHome(id)) {
-                player.sendMessage(ChatColor.RED + "Your previous home was overwritten!");
+                player.sendMessage("§cYour previous home was overwritten!");
             }
         }
 

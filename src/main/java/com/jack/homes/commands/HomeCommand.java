@@ -22,10 +22,10 @@ public class HomeCommand implements CommandExecutor {
             UUID id = player.getUniqueId();
 
             if (!plugin.hasHome(id)) {
-                player.sendMessage(ChatColor.RED + "You do not have a home set!");
+                player.sendMessage("§cYou do not have a home set!");
             } else {
                 player.teleport(plugin.getHome(id));
-                player.sendMessage(ChatColor.GREEN + "Teleporting!");
+                player.sendMessage("§aTeleporting!");
             }
         }
         return true;
